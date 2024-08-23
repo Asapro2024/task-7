@@ -1,0 +1,823 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.header{
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8% 0 3%;
+}
+.logo{
+    display: flex;
+    color: rgb(125, 112, 92);
+    
+}
+.logo i{
+    font-size: 40px;
+    padding-right: 20px;
+}
+.logo p{
+    font-size: 15px;
+}
+p b{
+    font-size: 30px;
+}
+.header ul{
+    display: flex;
+    list-style: none;
+}
+.header ul li{
+    padding: 40px 10px;
+    border-top: 4px solid transparent;
+}
+.header ul li a{
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(125, 112, 92);
+    transition: all 0.3s;
+}
+.header ul li:hover{
+    border-top: 4px solid rgb(96, 70, 31);
+}
+.header ul li:hover a{
+    color: rgb(96, 70, 31);
+}
+.dropdown{
+    display: none;
+}
+.header ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    top: 97px;
+    background-color: rgb(96, 70, 31, 0.85);
+    border-top: 3px solid rgb(96, 70, 31);
+}
+.header ul li:hover .dropdown ul{
+    display: block;
+    margin: 0px;
+}
+.header ul li:hover .dropdown ul li{
+    width: 170px;
+    padding: 7px 10px;
+    height: 40px;
+    border-bottom: 1px solid rgb(20, 14, 5);
+}
+.header ul li:hover .dropdown ul li:hover{
+    border-top: none;
+    background-color: rgb(190, 155, 94);
+}
+.header ul li:hover .dropdown ul li a{
+    color: white;
+}
+.dropdown-1{
+    display: none;
+}
+.dropdown ul li:hover .dropdown-1{
+    display: block;
+    position: absolute;
+    left: 170px;
+    background-color: rgb(96, 70, 31, 0.85);
+    margin-top: -25px;
+}
+.dropdown-2{
+    display: none;
+}
+.dropdown ul li:hover .dropdown-2{
+    display: block;
+    position: absolute;
+    right: 170px;
+    background-color: rgb(96, 70, 31, 0.85);
+    margin-top: -25px;
+}
+
+.sli-frm{
+    overflow: hidden;
+    width: 800px;
+    height: 400px;
+    
+}
+ 
+@-webkit-keyframes slide_animation{
+    0% {left: 0px;}
+    10% {left: 0px;}
+    20% {left: 800px;}
+    30% {left: 800px;}
+    40% {left: 1600px;}
+    50% {left: 1600px;}
+    60% {left: 800px;}
+    70% {left: 800px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left: 0px;}
+}
+.sli-img{
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 0 -1600px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 35s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    transition: 0.3s;
+}
+.imgcon{
+    height: 400px;
+    width: 800px;
+    position: relative;
+    float: left;
+}
+.imgcon img{
+    width: 800px;
+    height: 400px;
+}
+.donation{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    flex: 2;
+    margin: 0px 30px;
+}
+.con2 .h1{
+    font-size: 27px;
+    width: 80%;
+    padding-bottom: 20px;
+    color: white;
+}
+.con2 .h2{
+    font-size: 15px;
+    width: 80%;
+    color: white;
+    padding-bottom: 20px;
+}
+.con2{
+    padding: 30px 0;
+    background-color: rgb(45, 28, 0);
+}
+#donationform{
+    background-color: rgb(86, 58, 16);
+    padding: 40px 30px;
+    color: white;
+}
+.doncol .p1{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.doncol .p2{
+    font-size: 16px;
+    padding: 20px 0 0 0;
+}
+.doncol input{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(235, 207, 157);
+    border: none;
+    border-radius: 6px;
+}
+.doncol i{
+    position: relative;
+    top: 25px;
+    left: 15px;
+    color: rgb(86, 58, 16);
+}
+.doncol button{
+    background-color: rgb(175, 126, 51);
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    
+}
+.doninfo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    flex: 2;
+    background-color: rgb(222, 223, 224);
+    padding: 50px 20px 80px 20px;
+}
+.infoitem{
+        text-align: center;
+}
+.infoitem i{
+    font-size: 40px;
+    padding-bottom: 40px;
+}
+.infoitem #blue{
+    color: rgb(31, 77, 126);
+}
+.infoitem #green{
+    color: rgb(14, 155, 45);
+}
+.infoitem #yellow{
+    color: rgb(255, 184, 30);
+}
+.infoitem #purple{
+    color: rgb(198, 115, 209);
+}
+.inp1{
+    font-size: 22px;
+    padding-bottom: 20px;
+    color: rgb(125, 112, 92);
+}
+.inp2{
+    font-size: 15px;
+}
+.adminblock{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 2;
+    padding: 40px 20px 60px 20px;
+    width: 100%;
+}
+.adminitem img{
+    width: 100%;
+}
+.adp1{
+    font-size: 20px;
+    color: rgb(101, 79, 46);
+    padding: 15px 0;
+}
+.adp2{
+    font-size: 13px;
+    padding-bottom: 15px;
+    word-spacing: 3px;
+}
+.adp2 a{
+    text-decoration: none;
+    color: rgb(221, 147, 36);
+    font-weight: 1200px;
+}
+.adp3{
+    font-size: 15px;
+    padding-bottom: 25px;
+}
+.adminitem button{
+    font-size: 15px;
+    width: 150px;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(101, 79, 46);
+    color: white;
+}
+.adminitem button:hover {
+    background-color: rgb(86, 58, 16);
+}
+#adc{
+    display: block;
+}
+.admincode{
+    display: flex;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    background-color:  rgb(86, 58, 16);
+    width: 100%;
+}
+.admincode i{
+    font-size: 45px;
+    margin-right: 25px;
+    color: white;
+}
+.admincode p span{
+    font-size: 20px;
+    color: rgb(197, 178, 150);
+}
+.admincode p{
+    font-size: 15px;
+    color: white;
+}
+.aboutcon{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    flex: 2;
+    background-color: rgb(222, 223, 224);
+    padding: 30px;
+}
+#c11{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    flex: 2;
+    width: 600px;
+    
+    
+}
+#hicon{
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 15px;
+    
+}
+.ablogo{
+    display: flex;
+}
+.ablogo p{
+    font-size: 35px;
+    position: relative;
+    top: 15px;
+    padding-left: 15px;
+}
+.ab1 img{
+    width: 100%;
+}
+.abp11{
+    font-size: 20px;
+    margin-bottom: 35px;
+    color: rgb(140, 151, 161);
+    font-weight: 1200px;
+}
+.abp1{
+    font-size: 15px;
+}
+.fa-leaf{
+    margin-bottom: 50px;
+}
+.fa-info{
+    margin-bottom: 30px;
+}
+.fa-phone{
+    margin-bottom: 30px;
+}
+.hin121{
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+.hin122{
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+.hin123{
+    width: 100%;
+    height: 30px;
+    border: none;
+    padding-left: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.hin124{
+    width: 120px;
+    height: 40px;
+    border: none;
+    background-color: rgb(101, 79, 46);
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+.hin125{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+#hin126{
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(140, 151, 161);
+    border-radius: 50%;
+    padding: 9px 0 0 9px;
+    margin-right: 8px;
+}
+#hin126:hover{
+    background-color: rgb(101, 79, 46);
+    color: white;
+}
+.hin133{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.details{
+    display: flex;
+}
+#hin134{
+    margin-top: 30px;
+}
+.details i{
+    font-size: 14px;
+    margin-right: 10px;
+}
+.details p{
+    font-size: 15px;
+}
+.footer{
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    background-color: rgb(37, 40, 44);
+}
+.footer .ft2 p{
+ color: rgb(174, 109, 12);
+ font-size: 40px;
+ font-weight: 1200px;
+ margin-left: 600px;
+}
+.ft1 a{
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(174, 109, 12);
+}
+.ft1 p{
+    color: rgb(140, 151, 161);
+    font-size: 15px;
+    padding-top: 8px;    
+}
+.ft1 p span{
+    color: rgb(174, 109, 12);
+}
+.mobile{
+    display: none;
+}
+
+/* mobile screen */
+@media (max-width: 600px) {
+    body{
+        width: 100%;
+    }
+    .header{
+        background-color: white;
+        width: 100%;
+        height: 250px;
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15% 8% 15% 8%;
+    }
+    .logo{
+        display: flex;
+        color: rgb(125, 112, 92);
+    }
+    .logo i{
+        font-size: 40px;
+        padding-right: 15px;
+    }
+    .logo p{
+        font-size: 18px;
+    }
+    p b{
+        font-size: 25px;
+    }
+    .header ul{
+        display: none;
+    }
+    .sli-frm{
+        overflow: hidden;
+        width: 100%;
+        height: 400px;
+        
+    }
+     
+    @-webkit-keyframes slide_animation{
+        0% {left: 0px;}
+        10% {left: 0px;}
+        20% {left: 400px;}
+        30% {left: 400px;}
+        40% {left: 800px;}
+        50% {left: 800px;}
+        60% {left: 400px;}
+        70% {left: 400px;}
+        80% {left: 0px;}
+        90% {left: 0px;}
+        100% {left: 0px;}
+    }
+    .sli-img{
+        width: 1800px;
+        height: 400px;
+        margin: 0 0 0 -800px;
+        position: relative;
+        -webkit-animation-name: slide_animation;
+        -webkit-animation-duration: 35s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-play-state: running;
+        transition: 0.3s;
+    }
+    .imgcon{
+        height: 200px;
+        width: 400px;
+        position: relative;
+        float: left;
+    }
+    .imgcon img{
+        width: 100%;
+        height: 200px;
+    }
+    
+    .donation{
+        display: block;
+        gap: 0px;
+        flex: 2;
+        margin: 0px 15px;
+    }
+    .con2 .h1{
+        font-size: 23px;
+        width: 80%;
+        padding-bottom: 20px;
+        color: white;
+    }
+    .con2 .h2{
+        font-size: 15px;
+        width: 80%;
+        color: white;
+        padding-bottom: 20px;
+    }
+    .con2{
+        padding: 50px 0 25px 0;
+        background-color: rgb(45, 28, 0);
+    }
+    #donationform{
+        background-color: rgb(86, 58, 16);
+        padding: 30px 30px;
+        color: white;
+        margin-top: -190px;
+    }
+    .doncol .p1{
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+    .doncol .p2{
+        font-size: 16px;
+        padding: 20px 0 0 0;
+    }
+    .doncol input{
+        width: 100%;
+        height: 30px;
+        background-color: rgb(235, 207, 157);
+        border: none;
+        border-radius: 6px;
+    }
+    .doncol i{
+        position: relative;
+        top: 25px;
+        left: 15px;
+        color: rgb(86, 58, 16);
+    }
+    .doncol button{
+        background-color: rgb(175, 126, 51);
+        border: none;
+        color: white;
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 6px;
+        margin-top: 15px;
+        
+    }
+    .doninfo{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        flex: 2;
+        background-color: rgb(222, 223, 224);
+        padding: 50px 20px 80px 20px;
+    }
+    .adminblock{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        flex: 2;
+        padding: 40px 20px 60px 20px;
+        width: 100%;
+    }
+    .aboutcon{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 35px;
+        flex: 2;
+        background-color: rgb(222, 223, 224);
+        padding: 30px;
+    }
+    #c11{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+        flex: 2;
+        width: 600px;
+    }
+    .aboutcon{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 35px;
+        flex: 2;
+        background-color: rgb(222, 223, 224);
+        padding: 30px;
+    }
+    #c11{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+        flex: 2;
+        width: 100%;
+        
+        
+    }
+    #hicon{
+        font-size: 25px;
+        width: 60px;
+        height: 60px;
+        background-color: white;
+        text-align: center;
+        border-radius: 50%;
+        padding-top: 15px;
+        
+    }
+    .ablogo{
+        display: block;
+    }
+    .ablogo p{
+        font-size: 25px;
+        position: relative;
+        top: -15px;
+        padding-left: 15px;
+    }
+    .ab1 img{
+        width: 100%;
+        padding-top: 15px;
+    }
+    .abp11{
+        font-size: 20px;
+        margin-bottom: 35px;
+        color: rgb(140, 151, 161);
+        font-weight: 1200px;
+    }
+    .abp1{
+        font-size: 15px;
+    }
+    .fa-leaf{
+        margin-bottom: 50px;
+    }
+    .fa-info{
+        margin-bottom: 30px;
+    }
+    .fa-phone{
+        margin-bottom: 30px;
+    }
+    .hin121{
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    .hin122{
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+    .hin123{
+        width: 100%;
+        height: 30px;
+        border: none;
+        padding-left: 10px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+    .hin124{
+        width: 120px;
+        height: 40px;
+        border: none;
+        background-color: rgb(101, 79, 46);
+        color: white;
+        border-radius: 6px;
+        margin-bottom: 30px;
+    }
+    .hin125{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    #hin126{
+        font-size: 15px;
+        width: 30px;
+        height: 30px;
+        background-color: rgb(140, 151, 161);
+        border-radius: 50%;
+        padding: 9px 0 0 9px;
+        margin-right: 8px;
+    }
+    #hin126:hover{
+        background-color: rgb(101, 79, 46);
+        color: white;
+    }
+    .hin133{
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .details{
+        display: flex;
+    }
+    #hin134{
+        margin-top: 30px;
+    }
+    .details i{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .details p{
+        font-size: 15px;
+    }
+    .footer{
+        display: block;
+        width: 100%;
+        padding: 30px;
+        background-color: rgb(37, 40, 44);
+        margin: 0 auto;
+    }
+    .footer .ft2 p{
+     color: rgb(174, 109, 12);
+     font-size: 25px;
+     font-weight: 1200px;
+     margin-left: 0;
+     padding-top: 15px;
+    }
+    .ft1 a{
+        text-decoration: none;
+        font-size: 15px;
+        color: rgb(174, 109, 12);
+    }
+    .ft1 p{
+        color: rgb(140, 151, 161);
+        font-size: 15px;
+        padding-top: 8px;    
+    }
+    .ft1 p span{
+        color: rgb(174, 109, 12);
+    }
+    
+    .mobile{
+        display: flex;
+        
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropbtn {
+        background-color: #e5e5e5;
+        color: black;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        width: 375px;
+        text-align: left;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: block;
+        background-color: #fff;
+        min-width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    .dropdown-content a {
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #3c94ff;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+        
+    .content {
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .button {
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        margin: 10px;
+    }
+    
+    .blue {
+        background-color: #3DB8FF;
+        color: white;
+    }
+    
+    .white {
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+    }
+    
+}
